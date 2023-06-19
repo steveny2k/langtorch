@@ -6,6 +6,8 @@ import ai.knowly.langtorch.llm.cohere.schema.CohereGenerateResponse;
 import ai.knowly.langtorch.llm.cohere.schema.CohereHttpException;
 import ai.knowly.langtorch.llm.cohere.schema.CohereInterruptedException;
 import ai.knowly.langtorch.llm.cohere.schema.config.CohereAIServiceConfig;
+import ai.knowly.langtorch.llm.cohere.schema.dto.embedding.EmbeddingRequest;
+import ai.knowly.langtorch.llm.cohere.schema.dto.embedding.EmbeddingResult;
 import ai.knowly.langtorch.llm.cohere.serialization.CohereGenerateRequestAdapter;
 import ai.knowly.langtorch.utils.future.retry.FutureRetrier;
 import com.google.common.flogger.FluentLogger;
@@ -104,5 +106,13 @@ public class CohereAIService {
 
   public ListenableFuture<CohereGenerateResponse> generateAsync(CohereGenerateRequest request) {
     return futureRetrier.runWithRetries(() -> api.generate(request), response -> true);
+  }
+
+  public EmbeddingResult createEmbeddings(EmbeddingRequest request) {
+    return execute(createEmbeddingsAsync(request));
+  }
+
+  public ListenableFuture<EmbeddingResult> createEmbeddingsAsync(EmbeddingRequest request) {
+    return futureRetrier.runWithRetries(() -> api.createEmbeddings(request), result -> true);
   }
 }
