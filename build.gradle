@@ -40,54 +40,54 @@ tasks.withType(Javadoc).configureEach {
         options.addBooleanOption('html5', true)
     }
 }
+//
+// publishing {
+//     publications {
+//         mavenJava(MavenPublication) {
+//             from components.java
+//             artifact sourcesJar
+//             artifact javadocJar
+//
+//             pom {
+//                 name = 'LangTorch'
+//                 description = 'Building composable LLM applications with Java.'
+//                 url = 'https://github.com/Knowly-ai/langtorch'
+//                 licenses {
+//                     license {
+//                         name = 'MIT License'
+//                         url = 'https://github.com/Knowly-ai/langtorch/blob/master/LICENSE.md'
+//                     }
+//                 }
+//                 developers {
+//                     developer {
+//                         id = 'langtorch-ops'
+//                         name = 'Langtorch Ops'
+//                         email = 'admin@knowly.ai'
+//                     }
+//                 }
+//                 scm {
+//                     connection = 'scm:git:git://github.com/Knowly-ai/langtorch.git'
+//                     developerConnection = 'scm:git:ssh://github.com/Knowly-ai/langtorch.git'
+//                     url = 'https://github.com/Knowly-ai/langtorch'
+//                 }
+//             }
+//         }
+//     }
+//     repositories {
+//         maven {
+//             url = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
+//             credentials {
+//                 username = System.getenv('OSSRH_USERNAME')
+//                 password = System.getenv('OSSRH_PASSWORD')
+//             }
+//         }
+//     }
+// }
 
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-            artifact sourcesJar
-            artifact javadocJar
-
-            pom {
-                name = 'LangTorch'
-                description = 'Building composable LLM applications with Java.'
-                url = 'https://github.com/Knowly-ai/langtorch'
-                licenses {
-                    license {
-                        name = 'MIT License'
-                        url = 'https://github.com/Knowly-ai/langtorch/blob/master/LICENSE.md'
-                    }
-                }
-                developers {
-                    developer {
-                        id = 'langtorch-ops'
-                        name = 'Langtorch Ops'
-                        email = 'admin@knowly.ai'
-                    }
-                }
-                scm {
-                    connection = 'scm:git:git://github.com/Knowly-ai/langtorch.git'
-                    developerConnection = 'scm:git:ssh://github.com/Knowly-ai/langtorch.git'
-                    url = 'https://github.com/Knowly-ai/langtorch'
-                }
-            }
-        }
-    }
-    repositories {
-        maven {
-            url = 'https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/'
-            credentials {
-                username = System.getenv('OSSRH_USERNAME')
-                password = System.getenv('OSSRH_PASSWORD')
-            }
-        }
-    }
-}
-
-signing {
-    useInMemoryPgpKeys(gpgKey, gpgPassphrase)
-    sign publishing.publications.mavenJava
-}
+// signing {
+//     useInMemoryPgpKeys(gpgKey, gpgPassphrase)
+//     sign publishing.publications.mavenJava
+// }
 
 dependencies {
     // Lombok dependency and requires annotationProcessor
