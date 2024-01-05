@@ -1,7 +1,8 @@
 repo_name: steveny2k/langtorch
 report_id: 7e089974116c7fc0570797fbc246ca05
+version: 0.1
 repo_type: Public
-timestamp: '2023-11-10T09:44:05+00:00'
+timestamp: '2024-01-05T08:55:20+00:00'
 requested_by: 
 provider: github
 branch: master
@@ -16,6 +17,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/995/K85ZWV2F.png
+  detection_source_url: https://github.com/steveny2k/langtorch
   detection_source: Repo Metadata
 - name: H2 Database
   description: A relational database management system written in Java
@@ -25,6 +27,7 @@ tools:
   category: Data Stores
   sub_category: Databases
   image_url: https://img.stackshare.io/service/3105/h2-logo_square_400x400.png
+  detection_source_url: https://github.com/steveny2k/langtorch/blob/master/build.gradle
   detection_source: build.gradle
   last_updated_by: MysteriousPeople
   last_updated_on: 2023-05-31 08:27:49.000000000 Z
@@ -36,6 +39,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/steveny2k/langtorch
   detection_source: Repo Metadata
 - name: GitHub Actions
   description: Automate your workflow from idea to production
@@ -45,7 +49,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
-  detection_source: ".github/workflows/sonar.yml"
+  detection_source_url: https://github.com/steveny2k/langtorch/blob/master/.github/workflows/clean-build-test.yml
+  detection_source: ".github/workflows/clean-build-test.yml"
   last_updated_by: Weizhi Li
   last_updated_on: 2023-06-09 17:18:47.000000000 Z
 - name: Gradle
@@ -57,7 +62,8 @@ tools:
   category: Build, Test, Deploy
   sub_category: Java Build Tools
   image_url: https://img.stackshare.io/service/975/gradlephant-social-black-bg.png
-  detection_source: gradlew.bat
+  detection_source_url: https://github.com/steveny2k/langtorch/blob/master/build.gradle
+  detection_source: build.gradle
   last_updated_by: Weizhi Li
   last_updated_on: 2023-04-01 08:12:29.000000000 Z
 - name: Mockito
@@ -70,7 +76,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Testing Frameworks
   image_url: https://img.stackshare.io/service/2021/4y634TJm_400x400.jpg
-  detection_source_url: build.gradle
+  detection_source_url: https://github.com/steveny2k/langtorch/blob/master/build.gradle
   detection_source: build.gradle
   last_updated_by: Ayo
   last_updated_on: 2023-06-02 22:02:58.000000000 Z
@@ -83,4 +89,5 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/4631/default_c2062d40130562bdc836c13dbca02d318205a962.png
+  detection_source_url: https://github.com/steveny2k/langtorch
   detection_source: Repo Metadata
